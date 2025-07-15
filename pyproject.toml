@@ -1,6 +1,6 @@
 [project]
 name = "llmrelic"
-version = "0.1.1"
+version = "0.1.2"
 description = "A lightweight Python library that provides easy access to popular LLM model names and allows you to define which models your application supports."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -42,4 +42,4 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["llmrelic", "models", "main", "registry"]
+packages = ["llmrelic"]
