@@ -18,7 +18,6 @@ from models import (
 from registry import ModelRegistry, SupportedModels
 
 __all__ = [
-    # Model constants
     "OpenAI",
     "Anthropic",
     "Google",
@@ -26,7 +25,6 @@ __all__ = [
     "Mistral",
     "Meta",
     "Huggingface",
-    # Registry classes
     "ModelRegistry",
     "SupportedModels",
 ]
