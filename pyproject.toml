@@ -1,3 +1,46 @@
+[project]
+name = "llmrelic"
+version = "0.1.0"
+description = "A lightweight Python library that provides easy access to popular LLM model names and allows you to define which models your application supports."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+license = {text = "MIT"}
+keywords = [
+    "llm", "ai", "models", "registry", "openai", "anthropic", "google", "cohere", "mistral", "meta", "huggingface"
+]
+authors = [
+    { name = "OVECJOE", email = "vohachor@gmail.com" }
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+[project.urls]
+"Bug Reports" = "https://github.com/OVECJOE/llmrelic/issues"
+"Source" = "https://github.com/OVECJOE/llmrelic"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy",
+    "twine"
+]
+
 [build-system]
 requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta" 
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["llmrelic"]
+package-dir = {"llmrelic" = "."}
