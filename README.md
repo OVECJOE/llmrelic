@@ -1,8 +1,8 @@
-# LLM Registry
+# LLM Relic
 
 A lightweight Python library that provides easy access to popular LLM model names and allows you to define which models your application supports.
 
-## Why LLM Registry?
+## Why LLM Relic?
 
 - **No more hardcoded model names**: Access standardized model names from major providers
 - **Easy support definition**: Fluent interface to define which models your app supports
@@ -13,7 +13,7 @@ A lightweight Python library that provides easy access to popular LLM model name
 ## Installation
 
 ```bash
-pip install llm-registry
+pip install llmrelic
 ```
 
 ## Quick Start
@@ -21,7 +21,7 @@ pip install llm-registry
 ### Access Model Names
 
 ```python
-from llm_registry import OpenAI, Anthropic, Google
+from llmrelic import OpenAI, Anthropic, Google
 
 # Access model names directly
 print(OpenAI.gpt_4)  # "gpt-4"
@@ -35,7 +35,7 @@ print(OpenAI.list_models())
 ### Define Supported Models
 
 ```python
-from llm_registry import SupportedModels
+from llmrelic import SupportedModels
 
 # Define which models your app supports
 supported = (SupportedModels.create()
@@ -56,7 +56,7 @@ print(supported.get_supported_models())
 ### Use in Your Application
 
 ```python
-from llm_registry import OpenAI, SupportedModels
+from llmrelic import OpenAI, SupportedModels
 
 class MyLLMApp:
     def __init__(self):
@@ -98,7 +98,7 @@ app.chat("gpt-4", "Hello!")  # Works
 Each provider exposes models as attributes:
 
 ```python
-from llm_registry import OpenAI, Anthropic, Google, Cohere, Mistral, Meta, Huggingface
+from llmrelic import OpenAI, Anthropic, Google, Cohere, Mistral, Meta, Huggingface
 
 # Access models
 OpenAI.gpt_4  # "gpt-4"
@@ -115,7 +115,7 @@ OpenAI.list_models()
 ### SupportedModels (Fluent Interface)
 
 ```python
-from llm_registry import SupportedModels
+from llmrelic import SupportedModels
 
 supported = (SupportedModels.create()
              .openai()  # All OpenAI models
@@ -135,7 +135,7 @@ supported.get_models()  # List of all supported models
 ### ModelRegistry (Direct Interface)
 
 ```python
-from llm_registry import ModelRegistry
+from llmrelic import ModelRegistry
 
 registry = ModelRegistry()
 registry.add_provider("openai")
@@ -158,7 +158,7 @@ for model in registry:
 ## Utility Functions
 
 ```python
-from llm_registry import get_all_models, find_model
+from llmrelic import get_all_models, find_model
 
 # Get all available models by provider
 all_models = get_all_models()

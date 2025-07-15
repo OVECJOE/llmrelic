@@ -1,5 +1,5 @@
 """
-Setup script for llm-registry package.
+Setup script for llmrelic package.
 """
 
 from setuptools import setup, find_packages
@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="llm-registry",
+    name="llmrelic",
     version="0.1.0",
     author="OVECJOE",
     author_email="vohachor@gmail.com",
@@ -16,7 +16,7 @@ setup(
     "definitions.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ovecjoe/llm-registry",
+    url="https://github.com/ovecjoe/llmrelic",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -44,7 +44,7 @@ setup(
     keywords="llm, ai, models, registry, openai, anthropic, google, cohere, "
     "mistral, meta, huggingface",
     project_urls={
-        "Bug Reports": "https://github.com/ovecjoe/llm-registry/issues",
-        "Source": "https://github.com/ovecjoe/llm-registry",
+        "Bug Reports": "https://github.com/ovecjoe/llmrelic/issues",
+        "Source": "https://github.com/ovecjoe/llmrelic",
     },
 )

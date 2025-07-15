@@ -1,5 +1,5 @@
 """
-LLM Registry - A lighweight library for LLM model names and support
+LLM Relic - A lighweight library for LLM model names and support
 definitions.
 """
 
