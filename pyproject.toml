@@ -1,11 +1,11 @@
 [project]
 name = "llmrelic"
-version = "0.1.0"
+version = "0.1.1"
 description = "A lightweight Python library that provides easy access to popular LLM model names and allows you to define which models your application supports."
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = []
-license = {text = "MIT"}
+license = "MIT"
 keywords = [
     "llm", "ai", "models", "registry", "openai", "anthropic", "google", "cohere", "mistral", "meta", "huggingface"
 ]
@@ -42,5 +42,4 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["llmrelic"]
-package-dir = {"llmrelic" = "."}
+py-modules = ["llmrelic", "models", "main", "registry"]
