@@ -141,6 +141,17 @@ class HuggingfaceModels(ModelProvider):
         }
         super().__init__("Huggingface", models)
 
+class MoonshotModels(ModelProvider):
+    def __init__(self):
+        models = {
+            "MOONSHOT_V1_8K": "moonshot-v1-8k",
+            "MOONSHOT_V1_32K": "moonshot-v1-32k", 
+            "MOONSHOT_V1_128K": "moonshot-v1-128k",
+            "MOONSHOT_V1_AUTO": "moonshot-v1-auto",
+            "MOONSHOT_V1_VISION": "moonshot-v1-vision-preview"
+        }
+        super().__init__("Moonshot", models)
+
 
 # Initialize provider instances
 OpenAI = OpenAIModels()
@@ -150,6 +161,7 @@ Cohere = CohereModels()
 Mistral = MistralModels()
 Meta = MetaModels()
 Huggingface = HuggingfaceModels()
+Moonshot = MoonshotModels()
 
 # Provider registry
 PROVIDERS: Dict[str, ModelProvider] = {
@@ -160,6 +172,7 @@ PROVIDERS: Dict[str, ModelProvider] = {
     "mistral": Mistral,
     "meta": Meta,
     "huggingface": Huggingface,
+    "moonshot": Moonshot,
 }
 
 

@@ -13,7 +13,8 @@ from models import (
     Cohere,
     Mistral,
     Meta,
-    Huggingface
+    Huggingface,
+    Moonshot
 )
 from registry import ModelRegistry, SupportedModels
 
@@ -25,6 +26,7 @@ __all__ = [
     "Mistral",
     "Meta",
     "Huggingface",
+    "Moonshot",
     "ModelRegistry",
     "SupportedModels",
 ]

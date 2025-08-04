@@ -43,7 +43,8 @@ supported = (SupportedModels.create()
              .anthropic(["claude-3-opus-20240229", "claude-3-sonnet-20240229"])  # Specific models
              .google()  # All Google models
              .custom(["my-custom-model"])  # Your custom models
-             .build())
+             .build()
+             .moonshot())
 
 # Validate model support
 if supported.is_supported("gpt-4"):
@@ -90,6 +91,7 @@ app.chat("gpt-4", "Hello!")  # Works
 - **Mistral**: Mistral 7B, Mixtral 8x7B, and more
 - **Meta**: Llama 2, Code Llama, and more
 - **Hugging Face**: Popular open-source models
+- **Moonshot**: Kimi K1.5, Kimi K2, Kimi‑VL
 
 ## API Reference
 
@@ -98,7 +100,7 @@ app.chat("gpt-4", "Hello!")  # Works
 Each provider exposes models as attributes:
 
 ```python
-from llmrelic import OpenAI, Anthropic, Google, Cohere, Mistral, Meta, Huggingface
+from llmrelic import OpenAI, Anthropic, Google, Cohere, Mistral, Meta, Huggingface, Moonshot
 
 # Access models
 OpenAI.gpt_4  # "gpt-4"
@@ -123,6 +125,7 @@ supported = (SupportedModels.create()
              .anthropic()  # All Anthropic models
              .google(["gemini-pro"])  # Specific Google models
              .custom(["my-model"])  # Custom models
+             .moonshot() #All moonshot models
              .build())
 
 # Check support
