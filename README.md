@@ -100,7 +100,7 @@ app.chat("gpt-4", "Hello!")  # Works
 Each provider exposes models as attributes:
 
 ```python
-from llmrelic import OpenAI, Anthropic, Google, Cohere, Mistral, Meta, Huggingface, Moonshot
+from llmrelic import OpenAI, Anthropic, Google, Cohere, Mistral, Meta, Huggingface
 
 # Access models
 OpenAI.gpt_4  # "gpt-4"
@@ -125,7 +125,6 @@ supported = (SupportedModels.create()
              .anthropic()  # All Anthropic models
              .google(["gemini-pro"])  # Specific Google models
              .custom(["my-model"])  # Custom models
-             .moonshot() #All moonshot models
              .build())
 
 # Check support

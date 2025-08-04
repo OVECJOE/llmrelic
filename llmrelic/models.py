@@ -141,6 +141,7 @@ class HuggingfaceModels(ModelProvider):
         }
         super().__init__("Huggingface", models)
 
+#Popular Moonshot Models
 class MoonshotModels(ModelProvider):
     def __init__(self):
         models = {
@@ -148,7 +149,9 @@ class MoonshotModels(ModelProvider):
             "MOONSHOT_V1_32K": "moonshot-v1-32k", 
             "MOONSHOT_V1_128K": "moonshot-v1-128k",
             "MOONSHOT_V1_AUTO": "moonshot-v1-auto",
-            "MOONSHOT_V1_VISION": "moonshot-v1-vision-preview"
+            "MOONSHOT_V1_8k_VISION": "moonshot-v1-8k-vision-preview",
+            "MOONSHOT_V1_32k_VISION": "moonshot-v1-32k-vision-preview",
+            "MOONSHOT_V1_128k_VISION": "moonshot-v1-128k-vision-preview"
         }
         super().__init__("Moonshot", models)
 
