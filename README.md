@@ -43,8 +43,7 @@ supported = (SupportedModels.create()
              .anthropic(["claude-3-opus-20240229", "claude-3-sonnet-20240229"])  # Specific models
              .google()  # All Google models
              .custom(["my-custom-model"])  # Your custom models
-             .build()
-             .moonshot())
+             .build())
 
 # Validate model support
 if supported.is_supported("gpt-4"):
