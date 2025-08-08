@@ -138,6 +138,10 @@ class SupportedModels:
     ) -> "SupportedModels":
         """Add Hugging Face models."""
         return self._register("huggingface", models)
+    
+    def moonshot(self, models: Optional[List[str]] = None) -> "SupportedModels":
+        """Add Moonshot models."""
+        return self._register("moonshot", models)
 
     def custom(self, models: List[str]) -> "SupportedModels":
         """Add custom model names."""

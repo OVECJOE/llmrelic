@@ -90,6 +90,7 @@ app.chat("gpt-4", "Hello!")  # Works
 - **Mistral**: Mistral 7B, Mixtral 8x7B, and more
 - **Meta**: Llama 2, Code Llama, and more
 - **Hugging Face**: Popular open-source models
+- **Moonshot**: moonshot-v1-8k (Kimi K1.5), moonshot-v1-32k (Kimi K2), moonshot-vl-32k (Kimi‑VL)
 
 ## API Reference
 
