@@ -141,7 +141,7 @@ class HuggingfaceModels(ModelProvider):
         }
         super().__init__("Huggingface", models)
 
-#Popular Moonshot Models
+# Popular Moonshot Models
 class MoonshotModels(ModelProvider):
     def __init__(self):
         models = {
