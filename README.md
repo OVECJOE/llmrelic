@@ -178,12 +178,3 @@ provider = find_model("gpt-4")  # "openai"
 ## License
 
 MIT License
-
-## Changelog
-
-### 0.1.0
-
-- Initial release
-- Basic model name access
-- Fluent interface for defining supported models
-- Model validation and registry functionality
