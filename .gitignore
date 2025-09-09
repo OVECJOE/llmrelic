@@ -4,3 +4,4 @@ llmrelic.egg-info/
 .python-version
 dist/
 build/
+.pytest_cache
