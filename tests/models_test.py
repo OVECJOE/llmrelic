@@ -1,20 +1,8 @@
 import pytest
-# from ...llmrelic.llmrelic.models import (
-#     OpenAI, Anthropic, Google, Cohere, Mistral, Meta, Huggingface,
-#     PROVIDERS, get_all_models, find_model
-# )
-from ..llmrelic import models
-Anthropic = models.Anthropic
-OpenAI = models.OpenAI
-Google = models.Google
-Cohere = models.Cohere
-Mistral = models.Mistral
-Meta = models.Meta
-Huggingface = models.Huggingface
-Moonshot = models.Moonshot
-PROVIDERS = models.PROVIDERS
-get_all_models = models.get_all_models
-find_model = models.find_model 
+from llmrelic.models import (
+    OpenAI, Anthropic, Google, Cohere, Mistral, Meta, Huggingface,
+    PROVIDERS, get_all_models, find_model
+)
 
 def test_provider_str():
     assert str(OpenAI) == "OpenAI"
