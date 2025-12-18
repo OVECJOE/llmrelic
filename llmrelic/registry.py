@@ -3,7 +3,7 @@ Model registry for defining supported models in your application.
 """
 
 from typing import List, Dict, Optional, Set, Iterator
-from models import PROVIDERS
+from .models import PROVIDERS
 
 
 class ModelRegistry:

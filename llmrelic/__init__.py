@@ -6,7 +6,7 @@ definitions.
 __version__ = "0.1.5"
 __author__ = "OVECJOE"
 
-from models import (
+from .models import (
     OpenAI,
     Anthropic,
     Google,
@@ -18,7 +18,7 @@ from models import (
     get_all_models,
     find_model
 )
-from registry import ModelRegistry, SupportedModels
+from .registry import ModelRegistry, SupportedModels
 
 __all__ = [
     "OpenAI",
