@@ -3,6 +3,7 @@ LLM model name constants organized by provider.
 """
 
 from typing import List, Dict, Optional
+from .metadata import MODEL_METADATA, ModelMetadata
 
 
 class ModelProvider:
@@ -27,6 +28,20 @@ class ModelProvider:
     def get_model(self, key: str) -> str:
         """Get model name by key."""
         return self._models.get(key, key)
+
+    def get_metadata(self, model_name: str) -> Optional[ModelMetadata]:
+        """Get metadata for a specific model by name."""
+        if model_name in self._models.values():
+            return MODEL_METADATA.get(model_name)
+        return None
+
+    def list_metadata(self) -> List[ModelMetadata]:
+        """Return metadata for all models from this provider."""
+        return [
+            MODEL_METADATA[model]
+            for model in self._models.values()
+            if model in MODEL_METADATA
+        ]
 
     def __str__(self) -> str:
         """Return provider name."""
