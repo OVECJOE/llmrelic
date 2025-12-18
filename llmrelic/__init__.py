@@ -3,7 +3,7 @@ LLM Relic - A lighweight library for LLM model names and support
 definitions.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.5"
 __author__ = "OVECJOE"
 
 from models import (
@@ -14,7 +14,9 @@ from models import (
     Mistral,
     Meta,
     Huggingface,
-    Moonshot
+    Moonshot,
+    get_all_models,
+    find_model
 )
 from registry import ModelRegistry, SupportedModels
 
@@ -29,4 +31,6 @@ __all__ = [
     "Moonshot",
     "ModelRegistry",
     "SupportedModels",
+    "get_all_models",
+    "find_model",
 ]
