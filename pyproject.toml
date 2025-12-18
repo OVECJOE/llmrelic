@@ -4,7 +4,9 @@ version = "0.1.5"
 description = "A lightweight Python library that provides easy access to popular LLM model names and allows you to define which models your application supports."
 readme = "README.md"
 requires-python = ">=3.8"
-dependencies = []
+dependencies = [
+    "pytest>=8.3.5",
+]
 license = "MIT"
 keywords = [
     "llm", "ai", "models", "registry", "openai", "anthropic", "google", "cohere", "mistral", "meta", "huggingface"
