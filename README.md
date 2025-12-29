@@ -1,6 +1,6 @@
 # LLM Relic
 
-A lightweight Python library that provides easy access to popular LLM model names and allows you to define which models your application supports.
+A lightweight Python library providing easy access to popular LLM model names, metadata (context windows, capabilities, pricing tiers), and support definitions. Born from a failed experiment on context data compression for LLMs with finite context windows, this library helps developers manage model names, validate support, search by capabilities, and find models by requirements without hardcoding strings or maintaining spreadsheets.
 
 ## Why LLM Relic?
 
