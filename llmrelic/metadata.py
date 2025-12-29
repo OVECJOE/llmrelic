@@ -2,7 +2,7 @@
 Model metadata registry with capabilities for all supported models.
 """
 
-from typing import Dict
+from typing import Dict, Optional
 from .capabilities import (
     ModelMetadata,
     PricingTier,
@@ -493,6 +493,6 @@ MODEL_METADATA: Dict[str, ModelMetadata] = {
 }
 
 
-def get_metadata(model_name: str) -> ModelMetadata | None:
+def get_metadata(model_name: str) -> Optional[ModelMetadata]:
     """Get metadata for a model by its name, or None if not found."""
     return MODEL_METADATA.get(model_name)

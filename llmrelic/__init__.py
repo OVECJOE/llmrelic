@@ -3,7 +3,7 @@ LLM Relic - A lighweight library for LLM model names and support
 definitions.
 """
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 __author__ = "OVECJOE"
 
 from .models import (
