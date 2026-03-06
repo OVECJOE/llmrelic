@@ -54,15 +54,21 @@ class ModelRegistry:
         return sorted(self._supported_models)
 
     def get_supported_by_provider(self) -> Dict[str, List[str]]:
-        """Get supported models organized by provider."""
-        result = {}
+        """
+        Get supported models organized by provider.
+        A slightly optimized version is used to set intersections instead of calling ``is_supported`` for every model in the provider. This reduces Python overhead when the registry contains many models and providers have large model lists.
+        """
+        result: Dict[str, List[str]] = {}
+        # local reference to avoid global lookups in loop
+        supported = self._supported_models
         for provider_name, provider in PROVIDERS.items():
-            supported = [
-                model for model in provider.list_models()
-                if self.is_supported(model)
-            ]
-            if supported:
-                result[provider_name] = supported
+            # intersect the two sets; provider.list_models() returns a list so
+            # convert to set once
+            provider_models = set(provider.list_models())
+            matches = supported & provider_models
+            if matches:
+                # sort for deterministic output (tests rely on some ordering)
+                result[provider_name] = sorted(matches)
         return result
 
     def clear(self) -> "ModelRegistry":
