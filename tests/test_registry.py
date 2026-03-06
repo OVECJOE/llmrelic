@@ -153,6 +153,21 @@ class TestModelRegistry:
         assert "cohere" not in result
         assert "mistral" not in result
 
+    def test_get_supported_by_provider_output_is_sorted(self):
+        """The list returned for each provider should be sorted alphabetically.
+
+        This test also indirectly verifies that our optimized intersection logic
+        doesn't break existing functionality when models are added in an
+        arbitrary order.
+        """
+        registry = ModelRegistry()
+        # insert models in reverse order intentionally
+        for model in reversed(OpenAI.list_models()):
+            registry.add_model(model)
+        result = registry.get_supported_by_provider()
+        openai_models = result.get("openai", [])
+        assert openai_models == sorted(openai_models)
+
     def test_clear(self):
         """clear() should remove all models."""
         registry = ModelRegistry()
